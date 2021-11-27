@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# FB Helpdesk app client
+
+Client to manage your Facebook comments and messages.
+
+This app is a part of assignment by RichPanel.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
