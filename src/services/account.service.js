@@ -6,7 +6,6 @@ var account = null;
 
 const login = async () => {
   const { authResponse } = await new Promise(window.FB.login);
-  console.log(authResponse);
   if(!authResponse) return;
 
   await apiAuthenticate(authResponse.accessToken);
@@ -54,7 +53,8 @@ const accountService = {
   apiAuthenticate,
   logout,
   getAll,
-  loggedIn: () => { console.log(account); return account != null }
+  getAccount: () => account,
+  loggedIn: () => account != null
 }
 
 export default accountService;

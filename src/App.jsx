@@ -1,18 +1,17 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import { LinkedAccounts, Login } from './containers';
-import { accountService } from './services';
+import { Navbar, PrivateRoute } from './components';
+import { Home, LinkedAccounts, Login } from './containers';
 
 const App = () => {
   return (
     <div>
-      App.jsx
-      <Link to='/login'>Login</Link>
-      <button onClick={accountService.logout}>Log out</button>
+      <Navbar />
+      
       <Routes>
-        <Route path='/' element={<div>Home page</div>} />
-        <Route path='/linkedAccounts' element={<LinkedAccounts />} />
+        <Route path='/' element={<PrivateRoute component={Home} />} />
+        <Route path='/linkedAccounts' element={<PrivateRoute component={LinkedAccounts} />} />
         <Route path='/login' element={<Login />} />
       </Routes>
     </div>

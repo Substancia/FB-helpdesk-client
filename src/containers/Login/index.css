@@ -1,0 +1,15 @@
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Form {
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+.LoginForm, .Form {
+  display: flex;
+  flex-direction: column;
+}

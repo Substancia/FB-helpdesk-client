@@ -1,0 +1,10 @@
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+.Navbar > * {
+  margin: 0 10px;
+}
